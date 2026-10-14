@@ -1,0 +1,38 @@
+/* Light theme: plain white page, soft grey borders, no shadows */
+[data-theme='light'] body::before { display: none; }
+
+[data-theme='light'] :is(
+  .driver-card, .telemetry, .tower__row, .cal__card, .exp__card, .pubs__card,
+  .skills__group, .channel, .contact__form, .cv-menu__list,
+  .cal__arrows button, .theme-toggle, .nav__cv
+) {
+  border: 1px solid var(--edge);
+  box-shadow: none;
+}
+
+[data-theme='light'] .telemetry__head,
+[data-theme='light'] .telemetry__cell { border-color: var(--edge); }
+
+[data-theme='light'] .btn--ghost { background: var(--ink); color: #fff; }
+[data-theme='light'] .btn--ghost:hover { background: var(--red); }
+[data-theme='light'] .btn--solid:hover { background: var(--ink); color: #fff; }
+
+[data-theme='light'] .nav--solid::before { border-bottom: 1px solid var(--edge); }
+[data-theme='light'] .hero__glow { opacity: .35; }
+[data-theme='light'] .hero__sub { color: var(--text-soft); }
+
+[data-theme='light'] .skills__group li { border-color: var(--edge); }
+[data-theme='light'] .radio__form input,
+[data-theme='light'] .radio__form textarea { border: 1px solid var(--edge); }
+[data-theme='light'] .radio__form input:focus,
+[data-theme='light'] .radio__form textarea:focus { border-color: var(--red); }
+
+[data-theme='light'] .channel__icon { background: var(--ink); color: #fff; }
+[data-theme='light'] .channel:hover .channel__icon { background: rgba(255, 255, 255, .2); }
+[data-theme='light'] .cal__stem { background: var(--edge); }
+[data-theme='light'] .cal__slider { background: linear-gradient(90deg, var(--red) var(--fill), var(--edge) var(--fill)); }
+
+@media (max-width: 900px) {
+  [data-theme='light'] .nav::before { border-bottom: 1px solid var(--edge); }
+  [data-theme='light'] .nav__links { border-right: 1px solid var(--edge); }
+}

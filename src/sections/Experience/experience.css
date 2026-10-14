@@ -1,0 +1,24 @@
+.exp { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.exp__card {
+  background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 28px;
+  transition: background .3s, border-color .3s, color .3s;
+}
+.exp__head { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; margin-bottom: 18px; }
+.exp__head h3 { font-family: var(--head); font-size: 1.05rem; letter-spacing: 1px; }
+.exp__head p { color: var(--red2); margin-top: 4px; transition: color .3s; }
+.exp__head span { font-family: var(--head); font-size: .66rem; letter-spacing: 1.5px; color: var(--muted); white-space: nowrap; transition: color .3s; }
+.exp__card ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.exp__card li { position: relative; padding-left: 20px; color: var(--text-soft); transition: color .3s; }
+.exp__card li::before { content: ''; position: absolute; left: 0; top: .75em; width: 10px; height: 2px; background: var(--red); transition: background .3s; }
+
+.exp__card:hover { background: var(--red); border-color: var(--red); color: #fff; }
+.exp__card:hover .exp__head p, .exp__card:hover li, .exp__card:hover .exp__head span { color: rgba(255, 255, 255, .9); }
+.exp__card:hover li::before { background: #fff; }
+
+@media (max-width: 900px) {
+  .exp { grid-template-columns: 1fr; }
+  .exp__head { flex-direction: column; gap: 8px; }
+}
+@media (max-width: 480px) {
+  .exp__card { padding: 22px; }
+}

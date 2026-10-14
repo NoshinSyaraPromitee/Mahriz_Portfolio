@@ -1,0 +1,13 @@
+.skills { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.skills__group { padding: 28px; background: var(--panel); border: 1px solid var(--line); border-radius: 14px; }
+.skills__group h3 { font-family: var(--head); font-size: .85rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 18px; }
+.skills__group ul { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; }
+.skills__group li {
+  font-size: .9rem; padding: 7px 12px; border: 1px solid var(--line); border-radius: 999px;
+  color: var(--text-soft); cursor: default; transition: background .3s, border-color .3s, color .3s;
+}
+.skills__group li:hover { background: var(--red); border-color: var(--red); color: #fff; }
+
+@media (max-width: 900px) {
+  .skills { grid-template-columns: 1fr; }
+}

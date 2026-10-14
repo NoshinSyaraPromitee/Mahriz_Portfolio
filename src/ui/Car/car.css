@@ -1,0 +1,2 @@
+.rain-light { animation: blink 1s steps(2) infinite; }
+@keyframes blink { 50% { opacity: .15; } }

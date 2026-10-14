@@ -1,0 +1,5 @@
+.footer__flag {
+  height: 36px; animation: flag 2s linear infinite;
+  background: conic-gradient(#fff 0 25%, #000 0 50%, #fff 0 75%, #000 0) 0 0 / 36px 36px;
+}
+@keyframes flag { to { background-position: 72px 0; } }
