@@ -74,3 +74,22 @@
 @media (max-width: 340px) {
   .nav__link { padding: 7px 7px; font-size: .55rem; letter-spacing: .4px; }
 }
+
+/* nav-fit */
+nav-fit
+.nav { width: 100%; max-width: 100vw; }
+.nav__links { flex: 1 1 auto; min-width: 0; }
+.nav__actions { flex: none; margin-left: auto; }
+.nav__actions .theme-toggle { flex: none; }
+
+@media (max-width: 600px) {
+  .nav, .nav--solid { padding: 10px 14px; gap: 8px; }
+  .nav__links { gap: 0; }
+  .nav__link {
+    padding: 8px clamp(5px, 1.8vw, 9px);
+    font-size: clamp(.5rem, 2.9vw, .62rem);
+    letter-spacing: clamp(.2px, .25vw, 1px);
+  }
+  .nav__more-btn svg { width: 10px; height: 10px; }
+  .nav__more-list { left: auto; right: -60px; }
+}

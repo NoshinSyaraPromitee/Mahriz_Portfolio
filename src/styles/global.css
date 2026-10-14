@@ -31,3 +31,10 @@ section { padding: 120px var(--pad-x); position: relative; }
   :root { --pad-x: 18px; }
   section { padding: 64px var(--pad-x); }
 }
+
+/* mobile-width-guard */
+mobile-width-guard
+html, body { max-width: 100%; overflow-x: hidden; }
+@supports (overflow: clip) {
+  html, body { overflow-x: clip; }
+}
