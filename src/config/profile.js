@@ -77,3 +77,12 @@ export const licence = {
   ],
   footer: 'VALID TILL THE CHEQUERED FLAG',
 }
+
+// Contact form delivery
+// Get a free key at https://web3forms.com (enter mahriz.hossain@gmail.com) and paste it below.
+// Leave it empty to use FormSubmit instead (it emails an "Activate" link on the first message).
+export const contactForm = {
+  web3formsKey: '', // <- paste Web3Forms access key
+  to: 'mahriz.hossain@gmail.com',
+  subject: 'New message from the portfolio',
+}

@@ -2,7 +2,6 @@ export const results = [
   { pos: 'P1', title: 'Fastest Iutian | SimSurge', detail: 'Automech 2.0, organised by IUT Automobile Society and the Department of MPE - August 2026.', badge: 'FASTEST', c: 'var(--green)' },
   { pos: 'P3', title: '2nd Runners-up | AutoQuest', detail: 'Automech 2.0, organised by IUT Automobile Society and the Department of MPE - August 2026.', badge: 'PODIUM', c: 'var(--yellow)' },
   { pos: 'LDN', title: 'All-University Sim Racing', detail: 'Travelled to London to compete against university drivers in a simulator racing competition.', badge: 'COMPETED', c: 'var(--green)' },
-  { pos: 'P1', title: 'Car Quiz Champion', detail: 'Won the championship title in car-related quiz competitions multiple times.', badge: 'CHAMPION', c: 'var(--yellow)' },
   {
     pos: 'DSA', title: 'The Daily Star Award', detail: 'Graduated A-levels with all A/A* - The Daily Star, March 2023.',
     badge: 'AWARDED', c: 'var(--red)', image: '/Photos/DailyStarAward.jpg', view: 'VIEW AWARD',
