@@ -30,7 +30,7 @@ export default function ContactChannels() {
       {cvs.map((cv) => (
         <a key={cv.file} className="channel channel--cv" href={cv.file} download={cv.name}>
           <span className="channel__text">
-            <small>CV · {cv.label}</small>
+            <small>CV | {cv.label}</small>
             <b>{cv.note}</b>
           </span>
           <span className="channel__go">DOWNLOAD</span>

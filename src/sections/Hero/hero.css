@@ -4,6 +4,7 @@
   background: radial-gradient(circle, rgba(225, 6, 0, .35), transparent 65%);
 }
 .hero__grid { display: grid; grid-template-columns: 1.15fr 1fr; gap: 40px; align-items: center; position: relative; z-index: 2; }
+.hero__intro { min-width: 0; }
 .hero__name {
   font-family: var(--head); font-weight: 900; font-style: italic; text-transform: uppercase;
   font-size: clamp(2.8rem, 6vw, 5.8rem); line-height: .95; overflow: hidden;
@@ -27,15 +28,18 @@
 @keyframes road { to { background-position: -80px 0; } }
 
 @media (max-width: 900px) {
-  .hero { min-height: auto; padding-top: 110px; padding-bottom: 50px; }
-  .hero__grid { grid-template-columns: 1fr; gap: 10px; }
-  .hero__sub { font-size: 1rem; margin: 20px 0 26px; }
-  .hero__car { margin-top: 60px; }
+  .hero { min-height: auto; padding-top: 96px; padding-bottom: 40px; }
+  .hero__grid { grid-template-columns: 1fr; gap: 0; }
+  .hero__sub { font-size: 1rem; margin: 18px 0 24px; }
+  .hero__car { margin-top: 56px; }
 }
-@media (max-width: 480px) {
-  .hero__name { font-size: clamp(2.3rem, 13vw, 3.2rem); }
+@media (max-width: 600px) {
+  .hero__name { font-size: clamp(2.1rem, 12.5vw, 3.2rem); }
   .hero__name--outline { -webkit-text-stroke: 1.5px var(--text); }
-  .hero__cta { gap: 10px; }
-  .hero__cta .btn { flex: 1; text-align: center; padding: 14px 12px; font-size: .72rem; }
-  .hero__car { margin-top: 48px; width: 100%; }
+  .hero__sub { font-size: .95rem; line-height: 1.55; }
+  .hero__cta { gap: 10px; flex-wrap: nowrap; }
+  .hero__cta > * { flex: 1 1 0; min-width: 0; }
+  .hero__cta .btn { width: 100%; text-align: center; padding: 14px 10px; font-size: .64rem; letter-spacing: 1.2px; }
+  .hero__cta .cv-menu__list { left: auto; right: 0; min-width: 0; width: calc(200% + 10px); }
+  .hero__car { margin-top: 44px; width: 100%; }
 }

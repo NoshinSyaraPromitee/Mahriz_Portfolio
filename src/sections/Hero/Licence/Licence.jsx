@@ -13,22 +13,26 @@ export default function Licence() {
           <h4>MOTORSPORT<br />DRIVER LICENCE</h4>
           <span>BD</span>
         </header>
-        <div className="lic-photo">
-          {imgOk ? (
-            <img src={driver.photo} alt={`${driver.first} ${driver.last}`} onError={() => setImgOk(false)} />
-          ) : (
-            <div className="lic-init">MH</div>
-          )}
-        </div>
-        <div className="lic-info">
-          {licence.fields.map(([label, value, full]) => (
-            <div key={label} className={full ? 'is-full' : ''}>
-              <small>{label}</small>
-              <b>{value}</b>
+        <div className="lic-body">
+          <div className="lic-photo">
+            {imgOk ? (
+              <img src={driver.photo} alt={`${driver.first} ${driver.last}`} onError={() => setImgOk(false)} />
+            ) : (
+              <div className="lic-init">MH</div>
+            )}
+          </div>
+          <div className="lic-info">
+            <div className="lic-fields">
+              {licence.fields.map(([label, value, full]) => (
+                <div key={label} className={full ? 'is-full' : ''}>
+                  <small>{label}</small>
+                  <b>{value}</b>
+                </div>
+              ))}
             </div>
-          ))}
+            <div className="lic-sign">{driver.first}</div>
+          </div>
         </div>
-        <div className="lic-sign">{driver.first}</div>
         <footer className="lic-bottom">
           <div className="lic-barcode" />
           <span>{licence.footer}</span>

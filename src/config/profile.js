@@ -56,15 +56,15 @@ export const about = [
 export const info = [
   ['Institution', 'IUT'],
   ['Programme', 'B.Sc Mechanical Engineering'],
-  ['Batch', '22 Â· Class of 2027'],
+  ['Batch', '22 | Class of 2027'],
   ['Base', 'Dhaka, Bangladesh'],
   ['Target', 'Formula Racing Seat'],
 ]
 
 export const stats = [
   { value: 8.5, decimals: 1, label: 'IELTS Band Score', c: 'var(--purple)' },
-  { text: 'P1', label: 'Fastest Iutian Â· SimSurge', c: 'var(--green)' },
-  { text: 'A/A*', label: 'Daily Star Award Â· A-levels', c: 'var(--red)' },
+  { text: 'P1', label: 'Fastest Iutian | SimSurge', c: 'var(--green)' },
+  { text: 'A/A*', label: 'Daily Star Award | A-levels', c: 'var(--red)' },
   { value: 2, decimals: 0, label: 'Published Articles', c: 'var(--yellow)' },
 ]
 
@@ -72,8 +72,8 @@ export const licence = {
   fields: [
     ['Name', 'MAHRIZ HOSSAIN', true],
     ['Discipline', 'MECHANICAL ENGINEERING', true],
-    ['Class', 'FORMULA Â· SIM'],
-    ['Institution', 'IUT Â· BATCH 22'],
+    ['Class', 'FORMULA | SIM'],
+    ['Institution', 'IUT | BATCH 22'],
   ],
   footer: 'VALID TILL THE CHEQUERED FLAG',
 }
