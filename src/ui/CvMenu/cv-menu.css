@@ -1,0 +1,24 @@
+.cv-menu { position: relative; display: inline-flex; }
+.cv-menu__trigger { display: inline-flex; align-items: center; justify-content: center; gap: 8px; cursor: pointer; }
+.cv-menu__chev { width: 14px; height: 14px; transition: transform .25s; }
+.cv-menu__chev.is-open { transform: rotate(180deg); }
+
+.cv-menu__list {
+  position: absolute; top: calc(100% + 10px); z-index: 70; min-width: 270px; list-style: none; padding: 8px;
+  background: var(--panel); border: 1px solid var(--line); border-radius: 12px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, .35);
+}
+.cv-menu--right .cv-menu__list { right: 0; }
+.cv-menu--left .cv-menu__list { left: 0; }
+.cv-menu__list a {
+  display: flex; flex-direction: column; gap: 2px; padding: 12px 14px; border-radius: 8px;
+  color: var(--text); transition: background .3s, color .3s;
+}
+.cv-menu__list b { font-family: var(--head); font-size: .72rem; letter-spacing: 1.5px; text-transform: uppercase; }
+.cv-menu__list small { font-size: .82rem; color: var(--muted); transition: color .3s; }
+.cv-menu__list a:hover { background: var(--red); color: #fff; }
+.cv-menu__list a:hover small { color: rgba(255, 255, 255, .85); }
+
+@media (max-width: 480px) {
+  .cv-menu__list { min-width: 240px; }
+}

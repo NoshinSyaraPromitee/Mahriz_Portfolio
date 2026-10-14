@@ -1,0 +1,44 @@
+.contact__intro { color: var(--muted); max-width: 640px; margin: -20px 0 40px; font-size: 1.05rem; }
+.contact__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: start; }
+
+.channels { display: flex; flex-direction: column; gap: 12px; }
+.channel {
+  display: flex; align-items: center; gap: 16px; padding: 16px 20px;
+  background: var(--panel); border: 1px solid var(--line); border-radius: 14px;
+  transition: background .3s, border-color .3s, color .3s;
+}
+.channel__icon {
+  flex: none; width: 46px; height: 46px; border-radius: 12px; display: grid; place-items: center;
+  background: var(--ghost); color: var(--red2); transition: background .3s, color .3s;
+}
+.channel__icon svg { width: 22px; height: 22px; }
+.channel__text { flex: 1; min-width: 0; }
+.channel__text small { display: block; font-family: var(--head); font-size: .62rem; letter-spacing: 2px; color: var(--muted); text-transform: uppercase; transition: color .3s; }
+.channel__text b { display: block; font-size: 1.02rem; font-weight: 600; overflow-wrap: anywhere; }
+.channel__go { font-family: var(--head); font-size: .62rem; letter-spacing: 2px; color: var(--muted); transition: color .3s; }
+.channel:hover { background: var(--red); border-color: var(--red); color: #fff; }
+.channel:hover .channel__icon { background: rgba(255, 255, 255, .18); color: #fff; }
+.channel:hover small, .channel:hover .channel__go { color: rgba(255, 255, 255, .88); }
+.channel--cv { border-style: dashed; }
+
+.contact__form { padding: 32px; background: var(--panel); border: 1px solid var(--line); border-radius: 18px; }
+.contact__form h3 { font-family: var(--head); font-size: 1.1rem; letter-spacing: 1px; margin-bottom: 20px; }
+.radio__form { display: flex; flex-direction: column; gap: 14px; }
+.radio__form input, .radio__form textarea {
+  width: 100%; background: var(--field); border: 1px solid var(--line); color: var(--text); padding: 14px 16px;
+  font-family: var(--body); font-size: 1rem; border-radius: 6px; outline: none; resize: vertical;
+  transition: border-color .3s, background .4s;
+}
+.radio__form input:focus, .radio__form textarea:focus { border-color: var(--red); }
+
+@media (max-width: 900px) {
+  .contact__grid { grid-template-columns: 1fr; }
+  .contact__intro { margin: -10px 0 30px; font-size: 1rem; }
+}
+@media (max-width: 480px) {
+  .channel { gap: 12px; padding: 14px; }
+  .channel__icon { width: 40px; height: 40px; }
+  .channel__go { display: none; }
+  .channel__text b { font-size: .95rem; }
+  .contact__form { padding: 20px; }
+}

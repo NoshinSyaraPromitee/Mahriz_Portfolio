@@ -1,0 +1,37 @@
+.telemetry { margin-top: 30px; background: var(--panel); border: 1px solid var(--line); border-radius: 18px; overflow: hidden; }
+.telemetry__head {
+  display: flex; justify-content: space-between; align-items: center; gap: 12px;
+  padding: 14px 20px; border-bottom: 1px solid var(--line);
+}
+.telemetry__head span { font-family: var(--head); font-size: .62rem; letter-spacing: 3px; color: var(--muted); }
+.telemetry__leds { display: flex; gap: 5px; }
+.telemetry__leds i { width: 10px; height: 10px; border-radius: 50%; }
+.led--g { background: var(--green); }
+.led--r { background: var(--red); }
+.led--b { background: #3b82f6; }
+
+.telemetry__grid { display: grid; grid-template-columns: repeat(2, 1fr); }
+.telemetry__cell {
+  display: flex; flex-direction: column; justify-content: space-between; gap: 14px; min-height: 120px;
+  padding: 22px 20px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line);
+  transition: background .3s, color .3s;
+}
+.telemetry__cell:nth-child(2n) { border-right: none; }
+.telemetry__cell:nth-last-child(-n + 2) { border-bottom: none; }
+.telemetry__cell small {
+  font-family: var(--head); font-size: .6rem; letter-spacing: 2px; line-height: 1.6;
+  color: var(--muted); text-transform: uppercase; transition: color .3s;
+}
+.telemetry__cell b { font-family: var(--head); font-size: 2.3rem; font-weight: 900; font-style: italic; line-height: 1; }
+.telemetry__cell:hover { background: var(--red); color: #fff; }
+.telemetry__cell:hover small { color: rgba(255, 255, 255, .88); }
+
+@media (max-width: 480px) {
+  .telemetry__head { padding: 12px 14px; }
+  .telemetry__head span { font-size: .52rem; letter-spacing: 2px; }
+  .telemetry__leds { gap: 3px; }
+  .telemetry__leds i { width: 7px; height: 7px; }
+  .telemetry__cell { padding: 16px 14px; min-height: 104px; }
+  .telemetry__cell b { font-size: 1.7rem; }
+  .telemetry__cell small { font-size: .54rem; letter-spacing: 1.5px; }
+}

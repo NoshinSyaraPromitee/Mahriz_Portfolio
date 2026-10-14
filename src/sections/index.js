@@ -1,0 +1,8 @@
+export { default as Hero } from './Hero/Hero'
+export { default as About } from './About/About'
+export { default as Results } from './Results/Results'
+export { default as Journey } from './Journey/Journey'
+export { default as Experience } from './Experience/Experience'
+export { default as Publications } from './Publications/Publications'
+export { default as Skills } from './Skills/Skills'
+export { default as Contact } from './Contact/Contact'

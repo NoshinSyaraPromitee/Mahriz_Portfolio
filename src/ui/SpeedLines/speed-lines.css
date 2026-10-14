@@ -1,0 +1,6 @@
+.speed-lines { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+.speed-lines span {
+  position: absolute; right: -30%; height: 2px; animation: streak linear infinite;
+  background: linear-gradient(90deg, transparent, var(--streak));
+}
+@keyframes streak { to { transform: translateX(-180vw); } }

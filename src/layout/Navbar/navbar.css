@@ -1,0 +1,76 @@
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 50; padding: 20px var(--pad-x);
+  display: flex; align-items: center; justify-content: space-between; gap: 12px; transition: padding .4s;
+}
+.nav::before {
+  content: ''; position: absolute; inset: 0; z-index: -1; opacity: 0; transition: .4s;
+  background: var(--nav-bg); backdrop-filter: blur(12px);
+}
+.nav--solid { padding: 12px var(--pad-x); }
+.nav--solid::before { opacity: 1; }
+
+.nav__links { display: flex; align-items: center; gap: 6px; list-style: none; }
+.nav__link {
+  display: inline-flex; align-items: center; gap: 6px; padding: 9px 14px; border-radius: 999px;
+  font-family: var(--head); font-size: .72rem; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--text); background: transparent; border: none; cursor: pointer;
+  transition: background .3s, color .3s;
+}
+.nav__link:hover { color: var(--red2); }
+.nav__link.is-active { background: var(--red); color: #fff; }
+
+.nav__more { position: relative; display: none; }
+.nav__more-btn svg { width: 12px; height: 12px; transition: transform .25s; }
+.nav__more-btn svg.is-open { transform: rotate(180deg); }
+.nav__more-list {
+  position: absolute; top: calc(100% + 10px); left: 0; z-index: 70; min-width: 200px; list-style: none; padding: 8px;
+  background: var(--panel); border: 1px solid var(--edge); border-radius: 12px;
+}
+.nav__more-list a {
+  display: block; padding: 11px 14px; border-radius: 8px; font-family: var(--head); font-size: .7rem;
+  letter-spacing: 2px; text-transform: uppercase; color: var(--text); transition: background .3s, color .3s;
+}
+.nav__more-list a:hover { color: var(--red2); }
+.nav__more-list a.is-active { background: var(--red); color: #fff; }
+
+.nav__actions { display: flex; align-items: center; gap: 12px; flex: none; }
+.nav__cv {
+  font-family: var(--head); font-size: .7rem; letter-spacing: 2px; padding: 10px 16px; white-space: nowrap;
+  color: var(--text); background: transparent; border: 1px solid var(--edge); border-radius: 999px;
+  transition: background .3s, border-color .3s, color .3s;
+}
+.nav__cv:hover { background: var(--red); border-color: var(--red); color: #fff; }
+.nav__progress { position: absolute; left: 0; bottom: 0; height: 3px; width: 100%; transform-origin: left; background: var(--progress); }
+
+@media (max-width: 1150px) {
+  .nav__link { padding: 8px 10px; font-size: .64rem; letter-spacing: 1.5px; }
+}
+@media (max-width: 900px) {
+  .nav, .nav--solid { padding: 10px var(--pad-x); }
+  .nav::before { opacity: 1; }
+  .nav__links { gap: 2px; }
+  .nav__links > .tier-3 { display: none; }
+  .nav__more { display: block; }
+  .nav__more-list .tier-2 { display: none; }
+  .nav__link { padding: 8px 10px; font-size: .62rem; letter-spacing: 1px; }
+}
+@media (max-width: 480px) {
+  .nav__links > .tier-2 { display: none; }
+  .nav__more-list .tier-2 { display: list-item; }
+  .nav__link { padding: 7px 9px; font-size: .58rem; }
+  .nav__cv-full { display: none; }
+  .nav__cv { padding: 8px 12px; font-size: .62rem; }
+  .nav__actions { gap: 6px; }
+  .nav__actions .theme-toggle { width: 34px; height: 34px; }
+}
+/* mini car riding the progress bar */
+.nav { --racer-w: 58px; }
+.nav__racer { position: absolute; bottom: 2px; width: var(--racer-w); pointer-events: none; z-index: 2; }
+.nav__racer svg { width: 100%; display: block; }
+.nav__finish {
+  position: absolute; right: 0; bottom: 0; width: 12px; height: 12px; z-index: 1;
+  background: conic-gradient(#fff 0 25%, #000 0 50%, #fff 0 75%, #000 0) 0 0 / 6px 6px;
+}
+@media (max-width: 480px) {
+  .nav { --racer-w: 44px; }
+}
