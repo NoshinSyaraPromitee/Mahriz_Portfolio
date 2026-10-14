@@ -11,7 +11,7 @@ export const driver = {
   photo: '/mahriz.png',
   email: 'mahriz.hossain@gmail.com',
   tagline:
-    'Mechanical Engineering student at IUT, motorsport writer and sim racer chasing one dream - a seat in Formula racing.',
+    'Mechanical Engineering student at IUT, motorsport writer and sim racer',
 }
 
 export const cvs = [
